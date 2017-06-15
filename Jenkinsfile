@@ -13,7 +13,7 @@ node {
   
       //  app = docker.build("getintodevops/hellonode")
      //   app = docker.build("anuj-saxena-git")
-        app = docker.build("anujsaxenadocker90/baseimage")
+        app = docker.build("base-image-centos")
         
         
       //  sh 'app = docker.build("getintodevops/hellonode") '
