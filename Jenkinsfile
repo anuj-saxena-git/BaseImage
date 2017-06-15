@@ -13,7 +13,7 @@ node {
   
       //  app = docker.build("getintodevops/hellonode")
      //   app = docker.build("anuj-saxena-git")
-        app = docker.build("anujsaxenadocker90/anuj-saxena-git")
+        app = docker.build("anujsaxenadocker90/anuj-saxena-git:version1.0")
         
         
       //  sh 'app = docker.build("getintodevops/hellonode") '
@@ -43,8 +43,9 @@ node {
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://848859896798.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:anuj-ecr-credentials') {
      //       docker.withRegistry('https://hub.docker.com/r/anujsaxenadocker90/samplerepo/', 'docker-hub-credentials') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+      //      app.push("${env.BUILD_NUMBER}")
+            app.push("version1.0")
+      //      app.push("latest")
         }
         
     }
