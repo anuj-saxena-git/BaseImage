@@ -1,5 +1,11 @@
 node {
     def app
+    
+    stage('Initiation') {
+        
+        checkout scm
+    
+    }
 
     stage('Build base image') {
         /* This builds the actual image; synonymous to
