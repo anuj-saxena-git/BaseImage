@@ -44,7 +44,7 @@ node {
         docker.withRegistry('https://848859896798.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:anuj-ecr-credentials') {
      //       docker.withRegistry('https://hub.docker.com/r/anujsaxenadocker90/samplerepo/', 'docker-hub-credentials') {
       //      app.push("${env.BUILD_NUMBER}")
-            app.push("version2.0")
+            app.push("version3.0")
             app.push("latest")
         }
         
