@@ -13,7 +13,7 @@ node {
   
       //  app = docker.build("getintodevops/hellonode")
      //   app = docker.build("anuj-saxena-git")
-        app = docker.build("anujsaxenadocker90/anuj-saxena-git:version1.0")
+        app = docker.build("anujsaxenadocker90/baseimage")
         
         
       //  sh 'app = docker.build("getintodevops/hellonode") '
@@ -44,8 +44,8 @@ node {
         docker.withRegistry('https://848859896798.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:anuj-ecr-credentials') {
      //       docker.withRegistry('https://hub.docker.com/r/anujsaxenadocker90/samplerepo/', 'docker-hub-credentials') {
       //      app.push("${env.BUILD_NUMBER}")
-            app.push("version1.0")
-      //      app.push("latest")
+            app.push("version2.0")
+            app.push("latest")
         }
         
     }
